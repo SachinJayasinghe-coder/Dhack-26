@@ -1,0 +1,710 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050816;
+  --foreground: #ffffff;
+
+  --primary: #06b6d4;
+  --secondary: #3b82f6;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:
+  radial-gradient(circle at top left,#06213f,#050816 45%),
+  radial-gradient(circle at bottom right,#1b0d3d,#050816 45%);
+  color:white;
+  font-family:Arial,Helvetica,sans-serif;
+  overflow-x:hidden;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+main{
+  width:100%;
+}
+
+/* ---------------------------- */
+/* SECTION LAYOUT */
+/* ---------------------------- */
+
+section{
+  width:100%;
+  padding:80px 0;
+  justify-content:center;
+  width:100%;
+}
+
+.section-container{
+  width:100%;
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 1.25rem;
+}
+
+.section-gap{
+  margin-top:50px;
+}
+
+/* Tablets */
+@media (min-width:768px){
+
+  section{
+    padding:100px 0;
+  }
+
+  .section-container{
+    padding:0 2rem;
+  }
+
+  .section-gap{
+    margin-top:70px;
+  }
+
+}
+
+/* Laptops */
+@media (min-width:1024px){
+
+  section{
+    padding:120px 0;
+  }
+
+  .section-container{
+    max-width:1400px;
+    padding:0 3rem;
+  }
+
+  .section-gap{
+    margin-top:90px;
+  }
+
+}
+
+/* Large Desktops */
+@media (min-width:1536px){
+
+  section{
+    padding:140px 0;
+  }
+
+  .section-container{
+    max-width:1500px;
+  }
+
+}
+
+/* ---------------------------- */
+/* TYPOGRAPHY */
+/* ---------------------------- */
+
+h1,h2,h3,h4,h5,h6{
+  text-align:center;
+}
+
+p{
+  line-height:1.8;
+}
+
+/* ---------------------------- */
+/* GRID */
+/* ---------------------------- */
+
+.grid{
+  width:100%;
+}
+
+/* ---------------------------- */
+/* GLASS CARD */
+/* ---------------------------- */
+
+.glass-card{
+
+  width:100%;
+  min-height:420px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:2rem;
+
+  border-radius:24px;
+
+  background:rgba(255,255,255,.05);
+
+  backdrop-filter:blur(18px);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  transition:.35s ease;
+
+}
+
+.glass-card:hover{
+
+  transform:translateY(-8px);
+
+  border-color:#06b6d4;
+
+  box-shadow:0 20px 50px rgba(6,182,212,.20);
+
+}
+
+.card-description{
+
+  min-height:120px;
+
+}
+
+.card-footer{
+
+  margin-top:auto;
+
+  width:100%;
+
+  display:flex;
+
+  justify-content:center;
+
+}
+
+/* ---------------------------- */
+/* BUTTONS */
+/* ---------------------------- */
+
+.primary-btn{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  width:220px;
+
+  height:60px;
+
+  border-radius:16px;
+
+  background:linear-gradient(135deg,#06b6d4,#3b82f6);
+
+  color:#fff;
+
+  font-size:18px;
+
+  font-weight:700;
+
+  text-decoration:none;
+
+  border:none;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+  box-shadow:0 12px 35px rgba(6,182,212,.35);
+
+}
+
+.primary-btn:hover{
+
+  transform:translateY(-4px);
+
+  box-shadow:0 20px 45px rgba(6,182,212,.45);
+
+}
+
+.primary-btn:active{
+
+  transform:scale(.98);
+
+}
+
+.button-group{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:24px;
+
+  flex-wrap:wrap;
+
+  margin-top:50px;
+
+}
+
+/* ---------------------------- */
+/* SCROLL INDICATOR */
+/* ---------------------------- */
+
+.scroll-indicator{
+
+  position:absolute;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+}
+
+/* ---------------------------- */
+/* SCROLLBAR */
+/* ---------------------------- */
+
+::-webkit-scrollbar{
+
+  width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+  background:#050816;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+  background:linear-gradient(#06b6d4,#3b82f6);
+
+  border-radius:999px;
+
+}
+
+/* ===========================================
+   GLOBAL CENTER ALIGNMENT
+=========================================== */
+
+main{
+    width:100%;
+    margin:0 auto;
+}
+
+.section-container{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+}
+
+/* Center all headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    text-align:center;
+}
+
+/* Center paragraphs */
+
+p{
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* Center buttons */
+
+.button-group{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:24px;
+    flex-wrap:wrap;
+}
+
+/* Center all cards */
+
+.glass-card{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* Hero */
+
+.hero-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+/* Scroll Indicator */
+
+.scroll-indicator{
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* ==========================================================
+   DHACK'26 BUTTON SYSTEM
+========================================================== */
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 220px;
+  height: 58px;
+  padding: 0 32px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Primary */
+.primary-btn {
+  color: #fff;
+  background: linear-gradient(
+    135deg,
+    #06b6d4 0%,
+    #2563eb 100%
+  );
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow:
+    0 8px 24px rgba(37,99,235,.22);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 14px 34px rgba(37,99,235,.35);
+  filter: brightness(1.05);
+}
+
+.primary-btn:active {
+  transform: translateY(0);
+}
+
+/* Secondary */
+.secondary-btn {
+  color: white;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.14);
+  backdrop-filter: blur(16px);
+}
+
+.secondary-btn:hover {
+  background: rgba(6,182,212,.08);
+  border-color: rgba(6,182,212,.55);
+  transform: translateY(-3px);
+}
+
+/* Small Buttons */
+.btn-sm{
+  height:46px;
+  min-width:160px;
+  padding:0 22px;
+  font-size:15px;
+}
+
+/* Large Buttons */
+.btn-lg{
+  height:64px;
+  min-width:260px;
+  padding:0 42px;
+  font-size:18px;
+}
+
+/* ==========================================
+   DHACK'26 Loading Screen
+========================================== */
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Better text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth animations */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide scrollbar during loading */
+.loading-active {
+  overflow: hidden;
+}
+/* ==========================================
+   GLOBAL SECTION SPACING
+========================================== */
+
+#why-dhack > div > * + * {
+  margin-top: 6rem;
+}
+
+@media (max-width: 768px) {
+  #why-dhack > div > * + * {
+    margin-top: 4rem;
+  }
+}
+#categories > div > * + * {
+  margin-top: 6rem;
+}
+
+@media (max-width: 768px) {
+  #categories > div > * + * {
+    margin-top: 4rem;
+  }
+}
+#timeline > div > * + * {
+  margin-top: 6rem;
+}
+
+@media (max-width: 768px) {
+  #timeline > div > * + * {
+    margin-top: 4rem;
+  }
+}
+/* ==========================================
+   HERO SPACING
+========================================== */
+
+.hero-countdown {
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    margin-top: 0;
+}
+
+.hero-p {
+    margin-top: 10px;
+}
+
+.hero-h3 {
+    margin-top: 40px;
+}
+
+/* ==========================================
+   REGISTRATION PAGE SPACING
+========================================== */
+
+.registration-progress {
+    margin-top: 4rem;
+}
+
+.registration-content {
+    margin-top: 5rem;
+}
+
+/* Space below the category heading */
+.registration-content h2 {
+    margin-bottom: 3rem;
+}
+
+/* Card spacing */
+.registration-content .grid {
+    gap: 2.5rem;
+}
+
+/* Space below progress bar */
+.registration-progress + .registration-content {
+    margin-top: 5rem;
+}
+
+/* ==========================================
+   REGISTRATION FORM
+========================================== */
+
+/* Space between every question */
+.registration-form > div {
+    margin-bottom: 2rem;
+}
+
+/* Last question */
+.registration-form > div:last-child {
+    margin-bottom: 0;
+}
+
+/* Labels */
+.registration-form label {
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+/* Inputs */
+.registration-form input {
+    height: 32px;
+    width: 100%;
+}
+
+/* Gap before navigation */
+.registration-navigation {
+    margin-top: 2rem;
+}
+
+/* Gap between buttons */
+.registration-navigation button {
+    min-width: 180px;
+}
+/* ===================================================
+   PROJECT INFORMATION FORM
+=================================================== */
+
+.project-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.project-form > div {
+    margin-bottom: 3rem;
+}
+
+.project-form > div:last-child {
+    margin-bottom: 0;
+}
+
+/* Labels */
+
+.project-form label {
+    display: block;
+    margin-bottom: 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #d1d5db;
+}
+
+/* Inputs */
+
+.project-form input,
+.project-form textarea,
+.project-form select {
+    width: 100%;
+    border-radius: 14px;
+}
+
+/* PDF Upload Box */
+
+.project-form label:has(input[type="file"]) {
+    margin-bottom: 0;
+}
+
+/* Submission Box */
+
+.project-form .upload-box {
+    margin-top: 1rem;
+}
+
+/* Navigation Buttons */
+
+.project-navigation {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+/* ===================================================
+   PROJECT FORM
+=================================================== */
+
+.project-form {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Every Question */
+
+.project-form > div {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto 3.5rem auto;
+}
+
+/* Labels */
+
+.project-form > div > label:first-child {
+    display: block;
+    text-align: center;
+
+    margin-bottom: 1rem;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    color: #d1d5db;
+}
+
+/* Inputs */
+
+.project-form input,
+.project-form textarea,
+.project-form select {
+    width: 100%;
+}
+
+/* Upload Box */
+
+.project-form .upload-box {
+    width: 100%;
+}
+
+/* Navigation */
+
+.project-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    margin-top: 4rem;
+}
+/* Submission Guidelines */
+
+.submission-guidelines {
+    width: 100%;
+    max-width: 900px;
+    margin: 3rem auto 0 auto !important;
+
+    display: block !important;
+    text-align: left;
+    align-self: stretch;
+}
+/* ==========================================
+   REVIEW STEP
+========================================== */
+
+.review-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;        /* 32px gap */
+}
