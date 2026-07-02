@@ -5,6 +5,8 @@ import Categories from "@/components/categories/Categories";
 import Timeline from "@/components/timeline/Timeline";
 import Gallery from "@/components/gallery/Gallery";
 import Footer from "@/components/footer/Footer";
+import FAQ from "@/components/faq/FAQ";
+import Contact from "@/components/contact/Contact";
 
 export default function Home() {
   return (
@@ -20,6 +22,10 @@ export default function Home() {
       <Timeline />
 
       <Gallery />
+
+      <FAQ />
+
+      <Contact />
 
       <Footer />
     </main>
