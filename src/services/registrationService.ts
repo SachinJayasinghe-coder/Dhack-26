@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import { bisCommittee } from "@/data/bisCommittee";
 
 export async function registerTeam(
   category: string,
